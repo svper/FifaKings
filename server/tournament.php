@@ -29,7 +29,7 @@ function getTournament($tid)
 
 }
 
-function getTournamentTable($id)
+function getTournamentMatches($id)
 {
     // Create connection
     $conn = connect();
@@ -42,7 +42,8 @@ function getTournamentTable($id)
     AND mt1.user_id = m.home_id
     AND mt2.user_id = m.away_id
     AND t1.id = mt1.team_id
-    AND t2.id = mt2.team_id";
+    AND t2.id = mt2.team_id
+    AND m.tournament_id = " . $id;
     $result = $conn->query($sql);
 
     $jsonData = array();

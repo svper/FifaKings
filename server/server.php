@@ -79,6 +79,9 @@ switch ($_GET['method']) {
     case "getTournament":
     echo getTournament($objData->id);
     break;
+    case "getTournamentMatches":
+    echo getTournamentMatches($objData->id);
+    break;
     case "getTournaments":
     echo getTournaments();
     break;
@@ -95,7 +98,8 @@ switch ($_GET['method']) {
     case "getListMatches":
     echo getListMatches();
     break;
-    break;
+    default:
+    echo 'method unknown';
 }
 
 
