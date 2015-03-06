@@ -1,0 +1,15 @@
+<table class="table table-striped"> 
+
+	<tr ng-repeat="mtch in matches">
+		<td>{{mtch.homePlayer.getName()}}</td>
+		<td>{{mtch.homeTeam.name}}</td>
+		<td>{{mtch.homeScore}}</td>
+		<td>-</td>
+		<td>{{mtch.awayScore}}</td>
+		<td>{{mtch.awayTeam.name}}</td>
+		<td>{{mtch.awayPlayer.getName()}}</td>
+	</tr>
+</table>
+
+
+<button class="btn btn-success" ng-click="addPlayer()"><span class="gglyphicon glyphicon-plus"/> Add Match</button>

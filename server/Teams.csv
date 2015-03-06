@@ -1,0 +1,278 @@
+Arsenal;4,5;England;15;81;80;80
+Aston Villa;4;England;15;76;72;72
+Blackburn Rovers;3,5;England;15;72;72;70
+Bolton;3,5;England;15;70;72;71
+Chelsea;5;England;15;81;81;81
+Everton;4,5;England;15;76;75;77
+Fulham;4;England;15;78;77;75
+Liverpool;4,5;England;15;79;80;79
+Manchester City;5;England;15;85;83;81
+Manchester United;5;England;15;86;82;83
+Newcastle United;4,5;England;15;82;77;76
+Norwich City;3,5;England;15;72;72;73
+QPR;4;England;15;79;74;74
+Stoke City;4;England;15;75;76;75
+Sunderland;4;England;15;77;75;74
+Swansea City;4;England;15;73;73;73
+Tottenham Spurs;4,5;England;15;81;80;79
+West Brom;4;England;15;74;75;71
+Wigan Athletic;3,5;England;15;72;70;74
+Wolverhampton;3,5;England;15;73;70;71
+Athletic Bilbao;4;Spain;15;77;75;77
+Athletico Madrid;4,5;Spain;15;81;79;78
+CA Osasuna;4;Spain;15;72;73;74
+FC Barcelona;5;Spain;15;87;84;84
+Getafe CF;4;Spain;15;73;74;75
+Granada CF;3,5;Spain;15;73;72;72
+Levante UD;3,5;Spain;15;73;73;73
+Malaga CF;4,5;Spain;15;75;77;76
+Racing Club;3,5;Spain;15;70;71;70
+Rayo Vallecano;3,5;Spain;15;72;71;72
+RCD Espanyol;4;Spain;15;73;73;75
+RCD Mallorca;3,5;Spain;15;72;73;73
+Real Betis;3,5;Spain;15;74;72;72
+Real Madrid;5;Spain;15;86;85;83
+Real Sociedad;4;Spain;15;76;74;72
+Real Sporting;3,5;Spain;15;72;73;74
+Real Zaragoza;3,5;Spain;15;73;71;71
+Sevilla FC;4,5;Spain;15;80;76;76
+Valencia CF;4,5;Spain;15;80;79;79
+Villareal CF;3,5;Spain;15;74;74;72
+Atalanta;4;Italy;15;77;76;74
+Bologna;4;Italy;15;76;71;75
+Cagliari;4;Italy;15;74;76;74
+Catania;4;Italy;15;76;73;75
+Cesena;3,5;Italy;15;74;73;71
+Chievo Verona;4;Italy;15;75;74;74
+Fiorentina;4,5;Italy;15;76;75;73
+Genoa;4;Italy;15;76;74;74
+Inter;5;Italy;15;83;80;80
+Juventus;5;Italy;15;80;81;82
+Lazio;4,5;Italy;15;78;79;78
+Lecce;3,5;Italy;15;73;69;71
+Milan;4,5;Italy;15;81;79;79
+Napoli;4,5;Italy;15;80;78;78
+Novara;3;Italy;15;71;68;66
+Palermo;4;Italy;15;77;74;72
+Roma;4,5;Italy;15;78;78;75
+Siena;3,5;Italy;15;73;71;72
+Udinese;4;Italy;15;79;75;78
+Academica;3;Portugal;15;70;67;67
+C. Funchal;3,5;Portugal;15;69;69;70
+CD Nacional;3;Portugal;15;71;65;69
+Santa Maria;2,5;Portugal;15;67;66;63
+FC Porto;4,5;Portugal;15;79;80;77
+Pacos Ferreira;3;Portugal;15;67;66;68
+Rio Ave FC;3,5;Portugal;15;71;67;69
+SC Olhanese;3;Portugal;15;68;66;65
+SC Beria Mar;2,5;Portugal;15;68;61;65
+SC Braga;4;Portugal;15;77;74;73
+SL Benfica;4,5;Portugal;15;80;79;77
+Sporting CP;4,5;Portugal;15;78;76;75
+UD Levia;3;Portugal;15;67;66;66
+V Barcelos;3;Portugal;15;65;66;66
+Guinaraes;3,5;Portugal;15;72;68;70
+Vitoria FC;3;Portugal;15;68;68;67
+CSKA Moskva;4,5;Russia;15;79;75;75
+Dinamo Moskva;4;Russia;15;81;75;72
+Lokomotiv;4;Russia;15;76;74;72
+Rubin Kazan;4;Russia;15;74;76;73
+Spartak Moskva;4,5;Russia;15;79;77;73
+Terek Grozny;3;Russia;15;70;69;67
+Zenit;4,5;Russia;15;77;79;79
+A. Makhachkala;4;Russia;15;81;74;72
+FC Kaiserslautern;3,5;Germany;15;72;69;71
+FC Koln;4;Germany;15;74;73;73
+FC Nurnberg;3,5;Germany;15;71;71;71
+FSV Mainz 05;3,5;Germany;15;74;73;72
+1899 Hoffenheim;4;Germany;15;78;73;73
+Bayer;4,5;Germany;15;76;76;75
+FC Bayern;5;Germany;15;83;84;81
+Borussia Dortmund;4,5;Germany;15;79;79;80
+Borussia Mon' Gladbach;4;Germany;15;75;74;74
+FC Augsburg;3,5;Germany;15;74;71;70
+FC Shalke 04;4,5;Germany;15;85;78;76
+Hamburger SV;4;Germany;15;73;74;73
+Hannover 96;4;Germany;15;77;75;74
+Hertha BSC;3,5;Germany;15;73;71;71
+SC Freiburg;3,5;Germany;15;71;73;71
+VfB Stuttgart;4;Germany;15;77;76;75
+VfL Wolfsburg;4;Germany;15;76;75;75
+Werder Bremen;4;Germany;15;75;73;74
+AJ Ajaccio;3;France;15;72;68;67
+AJ Auxerre;3;France;15;66;65;67
+AS Nancy;3,5;France;15;69;65;70
+Bordeaux;4;France;15;75;74;75
+Djion FCO;3;France;15;70;68;66
+Evian Thonon FC;3,5;France;15;71;70;69
+FC Lorient;3,5;France;15;73;71;71
+FC Sochaux;3,5;France;15;71;70;69
+LOSC Lille;4,5;France;15;77;79;76
+Marseille;4;France;15;77;76;73
+Montpellier HSC;4;France;15;73;75;76
+OGS Nice;3,5;France;15;72;68;69
+Olympique Lyon;4;France;15;82;76;75
+PSG;5;France;15;82;78;80
+Saint Etienne;4;France;15;75;73;72
+SM Caen;3,5;France;15;71;70;68
+Stade Brest;3,5;France;15;69;70;69
+Stade Rennais;4;France;15;75;75;73
+Toulouse FC;3,5;France;15;73;73;73
+Valenciennes FC;3,5;France;15;74;70;70
+AEK Athens;3;Rest of the World;15;65;64;62
+Boca Juniors;3,5;Rest of the World;15;71;70;71
+Galatasaray SK;4,5;Rest of the World;15;77;77;75
+Kaiser Chiefs;3;Rest of the World;15;65;68;66
+Olympiakos CFP;4;Rest of the World;15;72;73;71
+Orlando Pirates;3;Rest of the World;15;67;70;66
+Panathinaikos;3,5;Rest of the World;15;70;71;71
+PAOK;3,5;Rest of the World;15;73;72;68
+Racing Club;3;Rest of the World;15;71;69;69
+River Plate;3,5;Rest of the World;15;72;70;69
+Beerschot AC;3;Belgium;15;67;65;64
+Cercle Brugge;3;Belgium;15;67;66;66
+Club Brugge;3,5;Belgium;15;71;71;71
+KAA Gent;3;Belgium;15;69;67;71
+KRC Genk;3;Belgium;15;71;69;68
+KV Kortrijk;3;Belgium;15;67;66;65
+KV Mechelen;3;Belgium;15;69;65;67
+KVC Westerlo;2,5;Belgium;15;66;64;64
+Lierse SK;2,5;Belgium;15;65;62;64
+OHL;2,5;Belgium;15;65;63;64
+RAEC Mons;2,5;Belgium;15;68;64;65
+RSC Anderlecht;3,5;Belgium;15;74;71;71
+Sporting Lokeren;3;Belgium;15;67;67;68
+Standard Liege;3,5;Belgium;15;69;69;71
+Zulte Waregem;3;Belgium;15;67;67;66
+Sint-Truiden;2,5;Belgium;15;66;64;63
+ADO Den Haag;3;Netherlands;15;65;66;65
+Ajax;4;Netherlands;15;76;72;73
+AZ Alkmaar;3,5;Netherlands;15;72;71;69
+De Graafschap;2,5;Netherlands;15;67;63;64
+FC Groningen;3;Netherlands;15;67;69;68
+FC Twente;4;Netherlands;15;74;73;72
+FC Utrecht;3;Netherlands;15;69;67;66
+Feyenoord;3,5;Netherlands;15;69;72;71
+Heracles Almelo;3;Netherlands;15;68;69;65
+NEC;3;Netherlands;15;66;68;66
+NAC Breda;3;Netherlands;15;66;65;66
+PSV;4;Netherlands;15;76;77;72
+RKC Waalwijk;2,5;Netherlands;15;65;64;64
+Roda JC;3;Netherlands;15;71;66;67
+SC Heerevenveen;3;Netherlands;15;68;72;69
+SBC Excelsior;2;Netherlands;15;62;62;63
+Vitesse;3,5;Netherlands;15;72;70;70
+VVV Venlo;3;Netherlands;15;67;66;62
+Cote d'Ivoire;4,5;International;15;79;77;72
+Chile;4,5;International;15;80;77;72
+Sweden;4;International;15;80;75;74
+Portugal;5;International;15;83;80;81
+Poland;4;International;15;78;73;70
+Parma;4;Italy;15;73;73;75
+Italy;5;International;15;81;81;81
+Leicester City;3;England;15;69;66;69
+Ireland;4;International;15;76;75;72
+Cruzeiro;4;Brazil;15;75;71;72
+Atl. Mineiro;4;Brazil;15;73;75;74
+Atl. Paranaense;3,5;Brazil;15;71;70;70
+Bahia;3,5;Brazil;15;70;69;68
+Botafogo;3,5;Brazil;15;75;74;70
+C. Nordeste;3,5;Brazil;15;69;70;69
+Corinthians;4;Brazil;15;78;74;73
+Corithika;3,5;Brazil;15;73;72;70
+Flamengo;4;Brazil;15;76;73;72
+Fluminese;4;Brazil;15;78;75;71
+Gremio;4;Brazil;15;75;74;73
+Porto Alegre;4;Brazil;15;74;69;73
+Palmeiras;3,5;Brazil;15;74;72;74
+Santos;4;Brazil;15;77;74;71
+Sao Paolo;4;Brazil;15;77;74;73
+Vasco Da Gama;4;Brazil;15;72;72;68
+Korea Republic;3,5;International;15;75;69;68
+Hungary;3,5;International;15;69;71;67
+Birmingham City;3,5;England;15;71;70;71
+Brazil;5;International;15;85;80;84
+Russia;4,5;International;15;79;78;78
+Coritiba;3,5;Brazil;15;70;70;72
+Finland;3,5;International;15;70;69;68
+Spain;5;International;15;86;86;84
+Norway;4;International;15;77;73;76
+Nottingham Forest;3;England;15;70;67;67
+Croatia;4,5;International;15;77;79;75
+Argentina;5;International;15;87;79;78
+France;5;International;15;83;82;82
+Kobenhavn FC;3,5;Denmark;15;71;70;69
+NY Red Bulls;3;USA;15;72;70;65
+Ecuador;3,5;International;15;76;74;64
+Germany;5;International;15;82;80;82
+Santa Catarina;3;Brazil;15;72;67;65
+Australia;3,5;International;15;71;70;69
+Austria;3,5;International;15;74;73;72
+Belgium;4,5;International;15;80;77;78
+Bulgaria;3,5;International;15;70;71;66
+Cameroon;4;International;15;81;73;75
+Colombia;4;International;15;76;76;76
+Denmark;4;International;15;76;74;74
+Egypt;3;International;15;68;68;68
+England;5;International;15;86;82;81
+Greece;4;International;15;73;72;74
+Mexico;4;International;15;83;75;75
+Netherlands;5;International;15;84;80;77
+Northern Ireland;3,5;International;15;70;67;69
+Peru;3,5;International;15;72;71;69
+Romania;3,5;International;15;73;69;71
+Scotland;4;International;15;74;74;74
+Slovenia;3,5;International;15;74;71;72
+South Africa;3,5;International;15;69;70;67
+Switzerland;4;International;15;73;75;76
+Turkey;4;International;15;75;77;74
+United States;4;International;15;74;74;70
+Uruguay;4,5;International;15;82;74;77
+FC Basel;3,5;Switzerland;15;74;70;68
+Monterrey;3,5;Mexico;15;72;71;70
+Tigres;3,5;Mexico;15;70;70;70
+America;3,5;Mexico;15;70;70;71
+Cruz Azul;3,5;Mexico;15;70;70;68
+Rangers;2,5;Rest of the World;15;61;63;65
+Rosenborg BK;3;Norway;15;70;68;70
+RC Deportivo;3,5;Spain;15;73;73;72
+Bosnia-herze.;4;International;15;78;73;74
+Ukraine;4;International;15;77;76;71
+Reading;3,5;England;15;73;70;70
+Southampton;3,5;England;15;73;70;72
+West Ham;3,5;England;15;75;73;71
+Blackpool;3;England;15;71;68;69
+Sp. Charleroi;2;Belgium;15;63;61;61
+Waasl.-Beveren;2,5;Belgium;15;63;64;62
+A. Goiania;3;Brazil;15;68;68;67
+N. Recife;3;Brazil;15;71;68;68
+P. Campinas;3;Brazil;15;69;66;67
+Portuguesa;3,5;Brazil;15;71;70;69
+S. Recife;3;Brazil;15;70;66;68
+P. Soa Paulo;3,5;Brazil;15;72;72;71
+V. R de Janeiro;3,5;Brazil;15;72;72;70
+ES Troyes;3;France;15;67;67;67
+SC Bastia;3;France;15;68;67;67
+Stade Reims;3;France;15;69;66;68
+AS Monaco;3,5;France;15;69;69;69
+FC Nuremberg;3,5;Germany;15;74;72;72
+Eint. Frankfurt;3,5;Germany;15;72;73;72
+F. Dusseldorf;3;Germany;15;68;70;68
+Greuther Furth;3,5;Germany;15;70;70;70
+Pescara;3,5;Italy;15;72;70;68
+Sampdoria;3,5;Italy;15;75;72;72
+Torino;4,5;Italy;15;74;73;73
+Santos Laguna;3,5;Mexico;15;73;70;69
+PEC Zwolle;2,5;Netherlands;15;65;65;65
+Willem II;2,5;Netherlands;15;64;63;63
+Molde FK;3,5;Norway;15;71;71;71
+Estoril;3;Portugal;15;65;67;66
+Moreira Conegos;3,5;Portugal;15;66;64;64
+Vit. Guimaraes;3;Portugal;15;70;68;69
+MLS All Stars;3,5;Rest of the World;15;74;73;67
+Celtic;3,5;Scotland;15;74;72;73
+Celta Vigo;3,5;Spain;15;72;72;71
+Real Valladolid;3,5;Spain;15;72;72;71
+Sporting Gijon;3,5;Spain;15;69;70;71
+LA Galaxy;3;USA;15;74;67;67
+Czech Republic;4;International;15;73;75;75

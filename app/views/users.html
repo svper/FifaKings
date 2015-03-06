@@ -1,0 +1,11 @@
+<table class="table table-striped"> 
+	<tr>
+		<th>Name</th><th>Email</th><th>Last Login</th><th>&nbsp;</th>
+	</tr>
+	<tr ng-repeat="usr in users">
+		<td>{{usr.getName()}}</td>
+		<td>{{usr.email}}</td>
+		<td>{{usr.lastLogin}}</td>
+		<td><a href="#/user/{{usr.id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+	</tr>
+</table>

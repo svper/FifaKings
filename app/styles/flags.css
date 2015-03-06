@@ -1,0 +1,148 @@
+/* line 1, ../../app/styles/flags.scss */
+.flag {
+  width: 16px;
+  height: 11px;
+  background: url(../images/sprites/flags.png) no-repeat;
+}
+
+/* line 7, ../../app/styles/flags.scss */
+.flag.flag-at {
+  background-position: -16px 0;
+}
+
+/* line 8, ../../app/styles/flags.scss */
+.flag.flag-ba {
+  background-position: -32px 0;
+}
+
+/* line 9, ../../app/styles/flags.scss */
+.flag.flag-be {
+  background-position: -48px 0;
+}
+
+/* line 10, ../../app/styles/flags.scss */
+.flag.flag-ch {
+  background-position: -64px 0;
+}
+
+/* line 11, ../../app/styles/flags.scss */
+.flag.flag-cz {
+  background-position: -80px 0;
+}
+
+/* line 12, ../../app/styles/flags.scss */
+.flag.flag-de {
+  background-position: 0 -11px;
+}
+
+/* line 13, ../../app/styles/flags.scss */
+.flag.flag-dk {
+  background-position: -16px -11px;
+}
+
+/* line 14, ../../app/styles/flags.scss */
+.flag.flag-eng {
+  background-position: -32px -11px;
+}
+
+/* line 15, ../../app/styles/flags.scss */
+.flag.flag-es {
+  background-position: -48px -11px;
+}
+
+/* line 16, ../../app/styles/flags.scss */
+.flag.flag-eu {
+  background-position: -64px -11px;
+}
+
+/* line 17, ../../app/styles/flags.scss */
+.flag.flag-fi {
+  background-position: -80px -11px;
+}
+
+/* line 18, ../../app/styles/flags.scss */
+.flag.flag-fr {
+  background-position: 0 -22px;
+}
+
+/* line 19, ../../app/styles/flags.scss */
+.flag.flag-gb {
+  background-position: -16px -22px;
+}
+
+/* line 20, ../../app/styles/flags.scss */
+.flag.flag-gr {
+  background-position: -32px -22px;
+}
+
+/* line 21, ../../app/styles/flags.scss */
+.flag.flag-ie {
+  background-position: -48px -22px;
+}
+
+/* line 22, ../../app/styles/flags.scss */
+.flag.flag-it {
+  background-position: -64px -22px;
+}
+
+/* line 23, ../../app/styles/flags.scss */
+.flag.flag-lu {
+  background-position: -80px -22px;
+}
+
+/* line 24, ../../app/styles/flags.scss */
+.flag.flag-mc {
+  background-position: 0 -33px;
+}
+
+/* line 25, ../../app/styles/flags.scss */
+.flag.flag-nl {
+  background-position: -16px -33px;
+}
+
+/* line 26, ../../app/styles/flags.scss */
+.flag.flag-pl {
+  background-position: -32px -33px;
+}
+
+/* line 27, ../../app/styles/flags.scss */
+.flag.flag-pt {
+  background-position: -48px -33px;
+}
+
+/* line 28, ../../app/styles/flags.scss */
+.flag.flag-ru {
+  background-position: -64px -33px;
+}
+
+/* line 29, ../../app/styles/flags.scss */
+.flag.flag-scotland {
+  background-position: -80px -33px;
+}
+
+/* line 30, ../../app/styles/flags.scss */
+.flag.flag-se {
+  background-position: 0 -44px;
+}
+
+/* line 31, ../../app/styles/flags.scss */
+.flag.flag-si {
+  background-position: -16px -44px;
+}
+
+/* line 32, ../../app/styles/flags.scss */
+.flag.flag-sk {
+  background-position: -32px -44px;
+}
+
+/* line 33, ../../app/styles/flags.scss */
+.flag.flag-us {
+  background-position: -48px -44px;
+}
+
+/* line 34, ../../app/styles/flags.scss */
+.flag.flag-wales {
+  background-position: -64px -44px;
+}
+
+/*# sourceMappingURL=flags.css.map */
