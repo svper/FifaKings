@@ -8,7 +8,7 @@
  * Service in the fifaKingsV2App.
  */
 angular.module('fifaKingsV2App')
-    .service('UserService',['User','$http','$q', function(User,$http,$q) {
+    .service('UserService', ['User', '$http', '$q', function(User, $http, $q) {
         var svc = this;
 
         svc.getUsers = function() {
@@ -19,7 +19,28 @@ angular.module('fifaKingsV2App')
                     var resp = [];
 
                     _.forEach(users, function(usr) {
-                        resp.push(new User(usr.id,usr.firstName, usr.lastName, usr.email, usr.lastLogin));
+                        resp.push(new User(usr.id, usr.firstName, usr.lastName, usr.email, usr.lastLogin));
+                    });
+                    def.resolve(resp);
+                })
+                .error(function() {
+                    def.reject("Failed to get users");
+                });
+
+            return def.promise;
+        };
+
+        svc.getUsersTournament = function(id) {
+
+            var def = $q.defer();
+            $http.post('../server/server.php?method=getUsersTournament', {
+                "id": id
+            }).
+            success(function(users, status) {
+                    var resp = [];
+
+                    _.forEach(users, function(usr) {
+                        resp.push(new User(usr.id, usr.firstName, usr.lastName, usr.email, usr.lastLogin));
                     });
                     def.resolve(resp);
                 })
@@ -40,7 +61,7 @@ angular.module('fifaKingsV2App')
                     "id": id
                 }).
                 success(function(usr, status) {
-                        def.resolve(new User(usr.id,usr.firstName, usr.lastName, usr.email, usr.lastLogin));
+                        def.resolve(new User(usr.id, usr.firstName, usr.lastName, usr.email, usr.lastLogin));
                     })
                     .error(function() {
                         def.reject("Failed to add team");
@@ -60,18 +81,18 @@ angular.module('fifaKingsV2App')
         };
 
     }]).factory('User', function() {
-    //Class Define
-    function User(id, firstName, lastName, email, lastLogin) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.lastLogin = lastLogin;
-    }
+        //Class Define
+        function User(id, firstName, lastName, email, lastLogin) {
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.lastLogin = lastLogin;
+        }
 
-    User.prototype.getName = function() {
-        return this.firstName + ' ' + this.lastName;
-    };
+        User.prototype.getName = function() {
+            return this.firstName + ' ' + this.lastName;
+        };
 
-    return User;
-});
+        return User;
+    });

@@ -40,6 +40,10 @@ angular
                 templateUrl: 'views/match.html',
                 controller: 'MatchCtrl'
             })
+            .when('/match/:tid', {
+                templateUrl: 'views/match.html',
+                controller: 'MatchCtrl'
+            })
             .when('/register', {
                 templateUrl: 'views/register.html',
                 controller: 'RegisterCtrl'
@@ -69,8 +73,8 @@ angular
                 controller: 'MatchesCtrl'
             })
             .when('/tournamentEdit', {
-              templateUrl: 'views/tournamentedit.html',
-              controller: 'TournamenteditCtrl'
+                templateUrl: 'views/tournamentedit.html',
+                controller: 'TournamenteditCtrl'
             })
             .otherwise({
                 redirectTo: '/'

@@ -15,6 +15,29 @@ function getMatches()
     return json_encode($jsonData);
 }
 
+function addMatch($match)
+{
+
+    $conn = connect();
+
+    $sql = "INSERT INTO `match` (`home_id`, `home_score`, `away_id`, `away_score`,`admin_id`,`tournament_id`,`version`,`random`  ) VALUES (" . $match->homeId  ."," . $match->homeScore . "," . $match->awayId . ",". $match->awayScore . ",". $match->adminId .",". $match->tournamentId .",". $match->version .",". $match->random .")";
+
+    if ($conn->query($sql) === TRUE) {
+        $matchId = $conn->insert_id;
+
+         $sql = "INSERT INTO `match_team` (`match_id`,`team_id`, `user_id`) VALUES (" . $matchId . "," . $match->homeTeamId . "," . $match->homeId .")";
+         $conn->query($sql);
+
+         $sql = "INSERT INTO `match_team` (`match_id`,`team_id`, `user_id`) VALUES (" . $matchId . "," . $match->awayTeamId . "," . $match->awayId .")";
+         $conn->query($sql);
+
+
+     return $matchId;
+ } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+}
+
 
 function getListMatches()
 {

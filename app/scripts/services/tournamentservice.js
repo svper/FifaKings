@@ -8,7 +8,7 @@
  * Service in the fifaKingsV2App.
  */
 angular.module('fifaKingsV2App')
-  .service('TournamentService',['Tournament','$http','$q', function(Tournament,$http,$q) {
+    .service('TournamentService', ['Tournament', '$http', '$q', function(Tournament, $http, $q) {
         var svc = this;
 
         svc.getTournaments = function() {
@@ -19,7 +19,7 @@ angular.module('fifaKingsV2App')
                     var resp = [];
 
                     _.forEach(tournaments, function(tour) {
-                        resp.push(new Tournament(tour.id,tour.name,tour.hostId,tour.regDate,tour.closed,tour.version,tour.leagueId,tour.elo));
+                        resp.push(new Tournament(tour.id, tour.name, tour.hostId, tour.regDate, tour.closed, tour.version, tour.leagueId, tour.elo));
                     });
                     def.resolve(resp);
                 })
@@ -30,7 +30,8 @@ angular.module('fifaKingsV2App')
             return def.promise;
         };
 
-           svc.getTournament = function(id) {
+
+        svc.getTournament = function(id) {
             var def = $q.defer();
 
             if (id) {
@@ -38,7 +39,7 @@ angular.module('fifaKingsV2App')
                     "id": id
                 }).
                 success(function(tour, status) {
-                        def.resolve(new Tournament(tour.id,tour.name,tour.hostId,tour.regDate,tour.closed,tour.version,tour.leagueId,tour.elo));
+                        def.resolve(new Tournament(tour.id, tour.name, tour.hostId, tour.regDate, tour.closed, tour.version, tour.leagueId, tour.elo));
                     })
                     .error(function() {
                         def.reject("Failed to find tournament");
@@ -51,7 +52,9 @@ angular.module('fifaKingsV2App')
         svc.add = function(tournament) {
 
             var def = $q.defer();
-            $http.post('../server/server.php?method=addTournament', {"tour":tournament}).
+            $http.post('../server/server.php?method=addTournament', {
+                "tour": tournament
+            }).
             success(function(tournamentId, status) {
                     var resp = [];
                     def.resolve(tournamentId);
@@ -63,19 +66,18 @@ angular.module('fifaKingsV2App')
             return def.promise;
         };
 
-  }]).factory('Tournament', function() {
+    }]).factory('Tournament', function() {
         //Class Define
-        function Tournament(id,name,hostId,regDate,closed,version,leagueId,elo)
-	    {
-	        this.id = id;
-	        this.name = name;
-	        this.hostId = hostId;
-	        this.regDate = new Date(regDate);
-	        this.closed = closed;
-	        this.version = version;
-	        this.leagueId = leagueId;
-	        this.elo = elo;
-	    }
+        function Tournament(id, name, hostId, regDate, closed, version, leagueId, elo) {
+            this.id = id;
+            this.name = name;
+            this.hostId = hostId;
+            this.regDate = new Date(regDate);
+            this.closed = closed;
+            this.version = version;
+            this.leagueId = leagueId;
+            this.elo = elo;
+        }
 
         return Tournament;
     });

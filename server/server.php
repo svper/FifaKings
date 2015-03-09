@@ -13,6 +13,14 @@ include 'tournament.php';
 $data = file_get_contents("php://input");
 
 
+function removeArrayItem( $array, $item ) {
+    $index = array_search($item, $array);
+    if ( $index !== false ) {
+        unset( $array[$index] );
+    }
+
+    return $array;
+}
 
 function escape($input)
 {
@@ -71,6 +79,9 @@ switch ($_GET['method']) {
     //users
     case "getUsers":
     echo getUsers();
+    break;    
+    case "getUsersTournament":
+    echo getUsersTournament($objData->id);
     break;
     case "getUser":
     echo getUser($objData->id);
@@ -81,6 +92,9 @@ switch ($_GET['method']) {
     break;
     case "getTournamentMatches":
     echo getTournamentMatches($objData->id);
+    break;
+        case "getTournamentTable":
+    echo getTournamentTable($objData->id);
     break;
     case "getTournaments":
     echo getTournaments();
@@ -95,6 +109,9 @@ switch ($_GET['method']) {
     case "addTeam":
     echo add($objData->team);
     //matches
+        case "addMatch":
+    echo addMatch($objData->match);
+    break;
     case "getListMatches":
     echo getListMatches();
     break;

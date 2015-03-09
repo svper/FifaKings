@@ -217,7 +217,6 @@ class Player
     public $id;
     public $firstName;
     public $lastName;
-    public $team;
     public $played;
     public $wins;
     public $draws;
@@ -228,12 +227,11 @@ class Player
     public $points;
 
     // Assigning the values
-    public function __construct($id,$firstName,$lastName,$team,$played,$wins,$draws,$losses,$goalsFor,$goalsAgainst,$goalsDiff,$points)
+    public function __construct($id,$firstName,$lastName,$played,$wins,$draws,$losses,$goalsFor,$goalsAgainst,$goalsDiff,$points)
     {
         $this->id = $id;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-        $this->team = $team;
         $this->played = $played;
         $this->wins = $wins;
         $this->draws = $draws;
