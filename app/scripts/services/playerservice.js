@@ -20,7 +20,7 @@ angular.module('fifaKingsV2App')
                     var resp = [];
 
                     _.forEach(players, function(plyr) {
-                        resp.push(new Player(plyr.id, plyr.firstName, plyr.lastName, plyr.team, plyr.played, plyr.wins, plyr.draws, plyr.losses, plyr.goalsFor, plyr.goalsAgainst, plyr.points));
+                        resp.push(new Player(plyr.id, plyr.firstName, plyr.lastName,'none', plyr.played, plyr.wins, plyr.draws, plyr.losses, plyr.goalsFor, plyr.goalsAgainst, plyr.points));
                     });
                     def.resolve(resp);
                 })

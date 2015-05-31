@@ -11,10 +11,11 @@ angular.module('fifaKingsV2App')
   .controller('PlayersCtrl', ['$scope','PlayerService',function ($scope,PlayerService) {
 PlayerService.getPlayers().then(
         function(records) {
+        	console.log(records);
             $scope.players = records;
         },
         function(data) {
-            console.log('teams retrieval failed.');
+            console.log('players retrieval failed.');
         }
         );
   }]);

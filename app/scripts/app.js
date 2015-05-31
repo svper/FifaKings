@@ -13,70 +13,95 @@ angular
         'ngAnimate',
         'ngCookies',
         'ngResource',
-        'ngRoute',
+        'ui.router',
         'ngSanitize',
         'ngTouch',
         'ui.bootstrap'
     ])
-    .config(function($routeProvider) {
-        $routeProvider
-            .when('/', {
+    .config(function($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise("/");
+
+        $stateProvider
+            .state('main', {
+                url: "/",
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
-            .when('/users', {
+            .state('users', {
+                url: "/users",
                 templateUrl: 'views/users.html',
                 controller: 'UsersCtrl'
             })
-            .when('/login', {
+            .state('login', {
+                url: "/login",
                 templateUrl: 'views/login.html',
                 controller: 'LoginCtrl'
             })
-            .when('/teams', {
+            .state('teams', {
+                url: "/teams",
                 templateUrl: 'views/teams.html',
                 controller: 'TeamsCtrl'
             })
-            .when('/match', {
+            /*.state('match', {
+                url:"/match",
                 templateUrl: 'views/match.html',
                 controller: 'MatchCtrl'
-            })
-            .when('/match/:tid', {
+            })*/
+            .state('matchNew', {
+                url: "/match",
                 templateUrl: 'views/match.html',
-                controller: 'MatchCtrl'
+                controller: 'MatchCtrl',
+                params: {
+                    tournamentId: null
+                },
+                resolve: {
+                    teams: ['TeamService', function(TeamService) {
+                        return TeamService.getTeams();
+                    }],
+                    players:['UserService','$stateParams', function(UserService,$stateParams) {
+                        return UserService.getUsersTournament($stateParams.tournamentId);
+                    }],
+                }
             })
-            .when('/register', {
+            .state('register', {
+                url: "/register",
                 templateUrl: 'views/register.html',
                 controller: 'RegisterCtrl'
             })
-            .when('/tournaments', {
+            .state('tournaments', {
+                url: "/tournaments",
                 templateUrl: 'views/tournaments.html',
                 controller: 'TournamentsCtrl'
             })
-            .when('/tournament', {
+            .state('tournament', {
+                url: "/tournament",
                 templateUrl: 'views/tournamentedit.html',
                 controller: 'TournamentEditCtrl'
             })
-            .when('/tournament/:tid', {
+            .state('tournamentDetail', {
+                url: "/tournament/:tid",
                 templateUrl: 'views/tournament.html',
                 controller: 'TournamentCtrl'
             })
-            .when('/player', {
+            .state('player', {
+                url: "/player",
                 templateUrl: 'views/player.html',
                 controller: 'PlayerCtrl'
             })
-            .when('/players', {
+            .state('players', {
+                url: "/players",
                 templateUrl: 'views/players.html',
                 controller: 'PlayersCtrl'
             })
-            .when('/matches', {
+            .state('matches', {
+                url: "/matches",
                 templateUrl: 'views/matches.html',
                 controller: 'MatchesCtrl'
             })
-            .when('/tournamentEdit', {
+            .state('tournamentEdit', {
+                url: "/tournamentEdit",
                 templateUrl: 'views/tournamentedit.html',
                 controller: 'TournamenteditCtrl'
-            })
-            .otherwise({
-                redirectTo: '/'
             });
     });

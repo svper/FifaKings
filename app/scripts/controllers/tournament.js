@@ -8,8 +8,8 @@
  * Controller of the fifaKingsV2App
  */
 angular.module('fifaKingsV2App')
-  .controller('TournamentCtrl',['$scope','TournamentService','PlayerService','MatchService','$routeParams', function ($scope,TournamentService,PlayerService,MatchService,$routeParams) {
-        $scope.tid = $routeParams.tid;
+  .controller('TournamentCtrl',['$scope','TournamentService','PlayerService','MatchService','$stateParams', function ($scope,TournamentService,PlayerService,MatchService,$stateParams) {
+        $scope.tid = $stateParams.tid;
 
 
         TournamentService.getTournament($scope.tid).then(

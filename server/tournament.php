@@ -96,7 +96,7 @@ function getTournamentMatches($id)
 {
     // Create connection
     $conn = connect();
-    $sql = "SELECT m.id as Id,u1.*,u2.*,t1.*,t2.*,m.home_score,m.away_score,m.admin_id,m.tournament_id,m.date,m.version,m.random
+    $sql = "SELECT m.id as Id,u1.*,u2.*,t1.*,t2.*,m.home_score,m.away_score,m.admin_id,m.tournament_id,m.date as MatchDate,m.version,m.random
     FROM `match` m , `user` u1,`user` u2 , `team` t1,`team` t2, `match_team` mt1,`match_team` mt2
     WHERE u1.id = m.home_id
     AND u2.id = m.away_id
@@ -106,7 +106,8 @@ function getTournamentMatches($id)
     AND mt2.user_id = m.away_id
     AND t1.id = mt1.team_id
     AND t2.id = mt2.team_id
-    AND m.tournament_id = " . $id;
+    AND m.tournament_id = " . $id ." 
+    ORDER BY MatchDate DESC";
     $result = $conn->query($sql);
 
     $jsonData = array();

@@ -1,42 +1,42 @@
-
-{{tournament.name}}
-{{tournament.regDate | date:'dd-MM-yyyy'}}
-
-<table class="table table-striped"> 
-	<tr>
-		<th></th><th>M</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>P</th>
-	</tr>
-	<tr ng-repeat="plyr in players">
-		<td>{{plyr.getName()}}</td>
-		<td>{{plyr.played}}</td>
-		<td>{{plyr.wins}}</td>
-		<td>{{plyr.draws}}</td>
-		<td>{{plyr.losses}}</td>
-		<td>{{plyr.goalsFor}}</td>
-		<td>{{plyr.goalsAgainst}}</td>
-		<td>{{plyr.goalsDiff}}</td>
-<td>{{plyr.points}}</td>
-	</tr>
+<table class="table table-striped">
+    <tr>
+        <th></th>
+        <th>M</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>GD</th>
+        <th>P</th>
+    </tr>
+    <tr ng-repeat="plyr in players">
+        <td>{{plyr.getName()}}</td>
+        <td>{{plyr.played}}</td>
+        <td>{{plyr.wins}}</td>
+        <td>{{plyr.draws}}</td>
+        <td>{{plyr.losses}}</td>
+        <td>{{plyr.goalsFor}}</td>
+        <td>{{plyr.goalsAgainst}}</td>
+        <td>{{plyr.goalsDiff}}</td>
+        <td>{{plyr.points}}</td>
+    </tr>
 </table>
-
-
 <br>
-
-
-<button class="btn btn-success" ng-click="addMatch()"><span class="gglyphicon glyphicon-plus"/> Add Match</button>
-
-<br><br><br>
-<table class="table table-striped"> 
-
-	<tr ng-repeat="mtch in matches" ng-class="{info:mtch.homeScore == mtch.awayScore}">
-		<td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homePlayer.getName()}}</td>
-		<td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homeTeam.name}}</td>
-		<td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homeScore}}</td>
-		<td>-</td>
-		<td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayScore}}</td>
-		<td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayTeam.name}}</td>
-		<td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayPlayer.getName()}}</td>
-	</tr>
+<a ui-sref="matchNew({ tournamentId: tournament.id })">
+    <button class="btn btn-success"><span class="gglyphicon glyphicon-plus" /> Add Match</button>
+</a>
+<br>
+<br>
+<br>
+<table class="table table-striped">
+    <tr ng-repeat="mtch in matches" ng-class="{info:mtch.homeScore == mtch.awayScore}">
+        <td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homePlayer.getName()}}</td>
+        <td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homeTeam.name}}</td>
+        <td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homeScore}}</td>
+        <td>-</td>
+        <td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayScore}}</td>
+        <td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayTeam.name}}</td>
+        <td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayPlayer.getName()}}</td>
+    </tr>
 </table>
-
-
