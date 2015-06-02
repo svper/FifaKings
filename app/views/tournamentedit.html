@@ -1,8 +1,7 @@
 <div class="col-sm-8">
     <div class="panel panel-default">
         <div class="panel-body">
-            <form class="form-horizontal" name="tournamentDetailForm" novalidate ng-submit="submitForm(tournamentDetailForm.$valid)" ts-error-scroll>
-
+            <form class="form-horizontal" name="tournamentDetailForm" novalidate ts-error-scroll>
                 <legend>General</legend>
                 <div class="form-group" ts-form-group-error="name">
                     <label class="requiredLabel col-lg-3 control-label">Name</label>
@@ -10,7 +9,6 @@
                         <input type="text" name="name" class="form-control" ng-model="tournament.name" required ng-model-options="{ debounce: 300 }" ng-minlength="2" ts-auto-focus />
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Host</label>
                     <div class="col-lg-9">
@@ -18,9 +16,6 @@
                     </div>
                 </div>
                 <legend>Players</legend>
-
-
-
                 <div class="form-group">
                     <table class="table table-striped">
                         <tr ng-repeat="plyr in tournament.players track by $index">
@@ -29,24 +24,14 @@
                             </td>
                         </tr>
                     </table>
-
                 </div>
-
-
-
-
-
-
-
                 <div class="form-group" ts-form-group-error="players">
                     <div class="col-lg-9">
                         <input type="text" ng-model="selectedPlayer" typeahead="player as player.getName() for player in users | filter:$viewValue | limitTo:8" class="form-control" placeholder="Select a player" id="playerHome" />
-
                     </div>
                     <div class="col-lg-2">
                         <a class="btn btn-success" ng-click="addPlayerToTournament(selectedPlayer)"><span class="glyphicon glyphicon-plus" />
                         </a>
-
                     </div>
                 </div>
         </div>
