@@ -1,0 +1,58 @@
+<div class="col-sm-8">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" name="addTeamForm" novalidate ts-error-scroll>
+                <legend>Add Team</legend>
+                <div class="form-group" ts-form-group-error="name">
+                    <label class="requiredLabel col-lg-3 control-label">Name</label>
+                    <div class="col-lg-9">
+                        <input type="text" name="name" class="form-control" ng-model="team.name" required ng-model-options="{ debounce: 300 }" ng-minlength="2" ts-auto-focus />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Country</label>
+                    <div class="col-lg-9">
+                        <select ng-model="team.country " class="form-control">
+                            <option value="ENG">England</option>
+                            <option value="ES">Spain</option>
+                            <option value="DE">Germany</option>
+                            <option value="IT">Italy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Quality</label>
+                    <div class="col-lg-9">
+                        <select ng-model="team.quality" class="form-control">
+                            <option value="5">5</option>
+                            <option value="4.5">4.5</option>
+                            <option value="4">4</option>
+                            <option value="3.5">3.5</option>
+                            <option value="3">3</option>
+                            <option value="2.5">2.5</option>
+                            <option value="2">2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-lg-12">
+            <div class="pull-right">
+                <div class="btn-group">
+                    <a class="mb-sm btn btn-labeled btn-default" ui-sref="teams">
+                        <span class="btn-label"><i class="fa fa-arrow-left"></i> Back</span>
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" ng-click="submitForm(addTeamForm.$valid)" class="mb-sm btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+</div>
+</div>

@@ -20,7 +20,7 @@ angular.module('fifaKingsV2App')
                     var resp = [];
 
                     _.forEach(players, function(plyr) {
-                        resp.push(new Player(plyr.id, plyr.firstName, plyr.lastName,'none', plyr.played, plyr.wins, plyr.draws, plyr.losses, plyr.goalsFor, plyr.goalsAgainst, plyr.points));
+                        resp.push(new Player(plyr.id, plyr.firstName, plyr.lastName, 'none', plyr.played, plyr.wins, plyr.draws, plyr.losses, plyr.goalsFor, plyr.goalsAgainst, plyr.points));
                     });
                     def.resolve(resp);
                 })
@@ -89,6 +89,10 @@ angular.module('fifaKingsV2App')
 
         Player.prototype.getName = function() {
             return this.firstName + ' ' + this.lastName;
+        };
+
+        Player.prototype.getShortName = function() {
+            return this.firstName + ' ' + this.lastName.substring(0,1) +'.';
         };
 
         return Player;

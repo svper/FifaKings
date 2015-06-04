@@ -43,6 +43,11 @@ angular
                 templateUrl: 'views/teams.html',
                 controller: 'TeamsCtrl'
             })
+            .state('team', {
+                url: "/team",
+                templateUrl: 'views/team.html',
+                controller: 'TeamCtrl'
+            })
             /*.state('match', {
                 url:"/match",
                 templateUrl: 'views/match.html',
@@ -59,7 +64,7 @@ angular
                     teams: ['TeamService', function(TeamService) {
                         return TeamService.getTeams();
                     }],
-                    players:['UserService','$stateParams', function(UserService,$stateParams) {
+                    players: ['UserService', '$stateParams', function(UserService, $stateParams) {
                         return UserService.getUsersTournament($stateParams.tournamentId);
                     }],
                 }
@@ -97,7 +102,12 @@ angular
             .state('matches', {
                 url: "/matches",
                 templateUrl: 'views/matches.html',
-                controller: 'MatchesCtrl'
+                controller: 'MatchesCtrl',
+                resolve: {
+                    matches: ['MatchService', function(MatchService) {
+                        return MatchService.getListMatches();
+                    }]
+                }
             })
             .state('tournamentEdit', {
                 url: "/tournamentEdit",

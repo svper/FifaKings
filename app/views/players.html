@@ -1,10 +1,37 @@
-<table class="table table-striped"> 
-	<tr>
-		<th></th><th>Played</th><th>Wins</th><th>Draws</th><th>Losses</th><th>Goals For</th><th>Goals Against</th>
-	</tr>
-	<tr ng-repeat="plyr in players">
-		<td>{{plyr.getName()}}</td>
-		<td><b>{{plyr.played}}<b></td>
+<table class="table table-striped">
+    <tr>
+        <th></th>
+        <th>
+            <div class="hidden-xs">Played</div>
+            <div class="visible-xs">P</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Wins</div>
+            <div class="visible-xs">W</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Draws</div>
+            <div class="visible-xs">D</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Losses</div>
+            <div class="visible-xs">L</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Goals For</div>
+            <div class="visible-xs">GF</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Goals Against</div>
+            <div class="visible-xs">GA</div>
+        </th>
+    </tr>
+    <tr ng-repeat="plyr in players">
+        <td>
+            <div class="hidden-xs">{{plyr.getName()}}</div>
+            <div class="visible-xs">{{plyr.getShortName()}}</div>
+        </td>
+        <td><b>{{plyr.played}}<b></td>
 		<td>{{plyr.wins}} <span class="percentage small">({{(plyr.wins / plyr.played) * 100 | number:0}}%)</span></td>
 		<td>{{plyr.draws}}</td>
 		<td>{{plyr.losses}}</td>

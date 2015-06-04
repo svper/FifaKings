@@ -8,16 +8,7 @@
  * Controller of the fifaKingsV2App
  */
 angular.module('fifaKingsV2App')
-  .controller('MatchesCtrl',[ '$scope','MatchService',function ($scope,MatchService) {
+    .controller('MatchesCtrl', ['$scope', 'MatchService', 'matches', function($scope, MatchService, matches) {
 
- MatchService.getListMatches().then(
-        function(records) {
-        	console.log(records);
-            $scope.matches = records;
-        },
-        function(data) {
-            console.log('teams retrieval failed.');
-        }
-        );
-
-  }]);
+        $scope.matches = matches;
+    }]);

@@ -1,40 +1,46 @@
-
-<form class="form-inline"><input type="text" ng-model="search.name" placeholder="Search..." class="form-control">
-	<select ng-model="search.quality" class="form-control">
-		
-		<option value="">All</option>
-		<option value="5">5</option>
-		<option value="4.5">4.5</option>
-		<option value="4">4</option>
-		<option value="3.5">3.5</option>
-		<option value="3">3</option>
-		<option value="2.5">2.5</option>
-		<option value="2">2</option>
-		<option value="1.5">1.5</option>
-		<option value="1">1</option>
-	</select>
-		<select ng-model="search.country " class="form-control">
-		<option value="">All</option>
-		<option value="ENG">England</option>
-		<option value="ES">Spain</option>
-		<option value="DE">Germany</option>
-		<option value="IT">Italy</option>
-	</select>
+<form class="form-inline">
+    <input type="text" ng-model="search.name" placeholder="Search..." class="form-control">
+    <select ng-model="search.quality" class="form-control">
+        <option value="">All</option>
+        <option value="5">5</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1</option>
+    </select>
+    <select ng-model="search.country " class="form-control">
+        <option value="">All</option>
+        <option value="ENG">England</option>
+        <option value="ES">Spain</option>
+        <option value="DE">Germany</option>
+        <option value="IT">Italy</option>
+    </select>
+    <button class="btn btn-success pull-right" ng-click="addTeam()"><span class="glyphicon glyphicon-plus" /> Add Team</button>
 </form>
-
-<table class="table table-striped"> 
-	<tr>
-		<th></th><th>Name</th><th>Quality</th><th>ATT</th><th>MID</th><th>DEF</th><th>&nbsp;</th>
-	</tr>
-	<tr ng-repeat="team in teams | filter:search | orderBy:'quality':true">
-		<td><img class="flag flag-{{team.country|lowercase}}"/></td>
-		<td>{{team.name}}</td>
-		<td>{{team.quality}}</td>
-		<td>{{team.att}}</td>
-		<td>{{team.mid}}</td>
-		<td>{{team.def}}</td>
-		<td><a ng-click="editTeam(team)"><span class="glyphicon glyphicon-pencil"/></a></td>
-	</tr>
+<table class="table table-striped">
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Quality</th>
+        <th>ATT</th>
+        <th>MID</th>
+        <th>DEF</th>
+        <th>&nbsp;</th>
+    </tr>
+    <tr ng-repeat="team in teams | filter:search | orderBy:'quality':true">
+        <td><img class="flag flag-{{team.country|lowercase}}" /></td>
+        <td>{{team.name}}</td>
+        <td>{{team.quality}}</td>
+        <td>{{team.att}}</td>
+        <td>{{team.mid}}</td>
+        <td>{{team.def}}</td>
+        <td>
+            <a ng-click="editTeam(team)"><span class="glyphicon glyphicon-pencil" /></a>
+        </td>
+    </tr>
 </table>
 
-<button class="btn btn-success"><span class="glyphicon glyphicon-plus"/> Add Team</button>
