@@ -1,11 +1,17 @@
 <table class="table table-striped">
     <tr ng-repeat="mtch in matches track by $index" ng-class="{info:mtch.homeScore == mtch.awayScore}">
-        <td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homePlayer.getName()}}</td>
+        <td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">
+            <div class="hidden-xs">{{mtch.homePlayer.getName()}}</div>
+            <div class="visible-xs">{{mtch.homePlayer.getShortName()}}</div>
+        </td>
         <td class="hidden-xs" ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homeTeam.name}}</td>
         <td ng-class="{success:mtch.homeScore > mtch.awayScore,danger:mtch.homeScore < mtch.awayScore}">{{mtch.homeScore}}</td>
         <td>-</td>
         <td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayScore}}</td>
         <td class="hidden-xs" ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayTeam.name}}</td>
-        <td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">{{mtch.awayPlayer.getName()}}</td>
+        <td ng-class="{success:mtch.homeScore < mtch.awayScore,danger:mtch.homeScore > mtch.awayScore}">
+            <div class="hidden-xs">{{mtch.awayPlayer.getName()}}</div>
+            <div class="visible-xs">{{mtch.awayPlayer.getShortName()}}</div>
+        </td>
     </tr>
 </table>

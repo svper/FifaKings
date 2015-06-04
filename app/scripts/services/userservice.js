@@ -94,5 +94,9 @@ angular.module('fifaKingsV2App')
             return this.firstName + ' ' + this.lastName;
         };
 
+        User.prototype.getShortName = function() {
+            return this.firstName + ' ' + this.lastName.substring(0, 1) + '.';
+        };
+
         return User;
     });

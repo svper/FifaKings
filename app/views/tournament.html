@@ -11,7 +11,10 @@
         <th>P</th>
     </tr>
     <tr ng-repeat="plyr in players">
-        <td>{{plyr.getName()}}</td>
+        <td>
+            <div class="hidden-xs">{{plyr.getName()}}</div>
+            <div class="visible-xs">{{plyr.getShortName()}}</div>
+        </td>
         <td>{{plyr.played}}</td>
         <td>{{plyr.wins}}</td>
         <td>{{plyr.draws}}</td>
