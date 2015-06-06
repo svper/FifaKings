@@ -1,0 +1,49 @@
+<table class="table table-striped">
+    <tr>
+        <th></th>
+        <th>
+            <div class="hidden-xs">Played</div>
+            <div class="visible-xs">P</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Wins</div>
+            <div class="visible-xs">W</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Draws</div>
+            <div class="visible-xs">D</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Losses</div>
+            <div class="visible-xs">L</div>
+        </th>
+        <th class="hidden-xs">
+            <div>Goals For</div>
+        </th>
+        <th class="hidden-xs">
+            <div>Goals Against</div>
+        </th>
+        <th>
+            <div class="hidden-xs">Goals Difference</div>
+            <div class="visible-xs">GD</div>
+        </th>
+        <th ng-show="showPoints">
+            <div class="hidden-xs">Points</div>
+            <div class="visible-xs">PTS</div>
+        </th>
+    </tr>
+    <tr ng-repeat="plyr in players">
+        <td>
+            <div class="hidden-xs">{{plyr.getName()}}</div>
+            <div class="visible-xs">{{plyr.getShortName()}}</div>
+        </td>
+        <td>{{plyr.played}}</td>
+        <td>{{plyr.wins}}</td>
+        <td>{{plyr.draws}}</td>
+        <td>{{plyr.losses}}</td>
+        <td class="hidden-xs">{{plyr.goalsFor}}</td>
+        <td class="hidden-xs">{{plyr.goalsAgainst}}</td>
+        <td>{{plyr.goalsDiff}}</td>
+        <td ng-show="showPoints">{{plyr.points}}</td>
+    </tr>
+</table>

@@ -29,7 +29,7 @@ function getTournament($tid)
 
 }
 
-function getTournamentPlayers()
+function getTournamentPlayers($tid)
 {
     // Create connection
     $conn = connect();
@@ -38,10 +38,28 @@ function getTournamentPlayers()
 
     $jsonData = array();
     while ($array = $result->fetch_row()) {
-        $jsonData[] = $array;
+        $jsonData[] = $array[0];
     }
-    return json_encode($jsonData);
+    return $jsonData;
 }
+
+function getEmptyTournamentPlayer($pid)
+{
+    // Create connection
+    $conn = connect();
+    $sql = "SELECT id,first_name,last_name  
+            FROM `user` 
+            WHERE id  = " .$pid;
+    $result = $conn->query($sql);
+
+
+    $array = $result->fetch_row();
+    $obj = new Player($array[0], $array[1], $array[2],0, 0, 0, 0, 0, 0, 0, 0);
+
+    return $obj;
+}
+
+
 
 function getTournamentTable($tid)
 {
@@ -83,13 +101,26 @@ function getTournamentTable($tid)
         $result = $conn->query($sql);
 
     $jsonData = array();
+    $playerIds = array();
     while ($array = $result->fetch_row()) {
-
-    $obj = new Player($array[0], $array[1], $array[2], $array[3], $array[4], $array[5], $array[6], $array[7], $array[8], $array[9], $array[10]);
-
-    $jsonData[] = $obj;
+      $playerIds[] = $array[0];
+      $obj = new Player($array[0], $array[1], $array[2], $array[3], $array[4], $array[5], $array[6], $array[7], $array[8], $array[9], $array[10]);
+      
+      $jsonData[] = $obj;
     }
+   $jsonData = array_merge($jsonData,addEmptyPlayerRows($playerIds,$tid));
 return json_encode($jsonData);
+}
+
+function addEmptyPlayerRows($ids,$tournamentId){
+
+  $tournamentPlayers = getTournamentPlayers($tournamentId);
+  $emptyIds = array_diff($tournamentPlayers, $ids);
+  $emptyPlayers = array();
+  foreach ($emptyIds as $pid) {
+    $emptyPlayers[] = getEmptyTournamentPlayer($pid);
+  }
+  return $emptyPlayers;
 }
 
 function getTournamentMatches($id)

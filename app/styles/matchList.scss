@@ -1,0 +1,17 @@
+.matchList {
+    .match {
+        &.row {
+            height: 4vh;
+            line-height: 4vh;
+        }
+        &.draw {
+            background-color: #d9edf7;
+        }
+        div.loss {
+            background-color: #f2dede
+        }
+        div.win {
+            background-color: #dff0d8;
+        }
+    }
+}

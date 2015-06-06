@@ -1,30 +1,4 @@
-<table class="table table-striped">
-    <tr>
-        <th></th>
-        <th>M</th>
-        <th>W</th>
-        <th>D</th>
-        <th>L</th>
-        <th>GF</th>
-        <th>GA</th>
-        <th>GD</th>
-        <th>P</th>
-    </tr>
-    <tr ng-repeat="plyr in players">
-        <td>
-            <div class="hidden-xs">{{plyr.getName()}}</div>
-            <div class="visible-xs">{{plyr.getShortName()}}</div>
-        </td>
-        <td>{{plyr.played}}</td>
-        <td>{{plyr.wins}}</td>
-        <td>{{plyr.draws}}</td>
-        <td>{{plyr.losses}}</td>
-        <td>{{plyr.goalsFor}}</td>
-        <td>{{plyr.goalsAgainst}}</td>
-        <td>{{plyr.goalsDiff}}</td>
-        <td>{{plyr.points}}</td>
-    </tr>
-</table>
+<player-table players="players" show-points="true"></player-table>
 <br>
 <a ui-sref="matchNew({ tournamentId: tournament.id })">
     <button class="btn btn-success"><span class="gglyphicon glyphicon-plus" /> Add Match</button>

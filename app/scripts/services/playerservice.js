@@ -22,6 +22,7 @@ angular.module('fifaKingsV2App')
                     _.forEach(players, function(plyr) {
                         resp.push(new Player(plyr.id, plyr.firstName, plyr.lastName, 'none', plyr.played, plyr.wins, plyr.draws, plyr.losses, plyr.goalsFor, plyr.goalsAgainst, plyr.points));
                     });
+                    console.log(resp);
                     def.resolve(resp);
                 })
                 .error(function() {

@@ -1,0 +1,17 @@
+/* line 3, ../../app/styles/matchList.scss */
+.matchList .match.row {
+  height: 4vh;
+  line-height: 4vh;
+}
+/* line 7, ../../app/styles/matchList.scss */
+.matchList .match.draw {
+  background-color: #d9edf7;
+}
+/* line 10, ../../app/styles/matchList.scss */
+.matchList .match div.loss {
+  background-color: #f2dede;
+}
+/* line 13, ../../app/styles/matchList.scss */
+.matchList .match div.win {
+  background-color: #dff0d8;
+}

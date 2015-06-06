@@ -109,7 +109,7 @@ angular.module('fifaKingsV2App')
             this.awayScore = awayScore;
             this.adminId = adminId;
             this.tournamentId = tournamentId;
-            this.regDate = regDate;
+            this.regDate = regDate instanceof Date ? regDate : new Date(regDate);
             this.version = version;
             this.random = random;
         }
