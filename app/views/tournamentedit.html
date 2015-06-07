@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Host</label>
                     <div class="col-lg-9">
-                        <input type="text" ng-model="tournament.host" typeahead="player as player.getName() for player in users | filter:$viewValue | limitTo:8" class="form-control" placeholder="Select a player" id="playerHome" />
+                        <input type="text" ng-change="hostChanged()" ng-model="tournament.host" typeahead="player as player.getName() for player in users | filter:$viewValue | limitTo:8" class="form-control" placeholder="Select a player" id="playerHome" />
                     </div>
                 </div>
                 <legend>Players</legend>

@@ -33,6 +33,13 @@ angular.module('fifaKingsV2App')
 
         };
 
+        $scope.hostChanged = function(host) {
+            if ($scope.tournament.host && $scope.tournament.host.firstName) {
+                $scope.tournament.players.push($scope.tournament.host);
+            }
+        };
+
+
         $scope.removePlayer = function(player) {
             _.pullAt($scope.tournament.players, _.findIndex($scope.tournament.players, 'id', player.id));
             $scope.selectedPlayer = '';
