@@ -1,3 +1,5 @@
 -Portal
 -suggested fixtures
 -laatste gekozen ploeg voor een speler inserten
+-filter bij matchen op userid (dropdown met namen , indien geselecteerd matchen laten zien van die speler)
+-statistics per speler
